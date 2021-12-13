@@ -1,0 +1,127 @@
+$Mobile: 375px;
+$Desktop: 1440px;
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+$white-paragraphs: hsla(0, 0%, 100%, 0.75);
+$gray-background-headings-buttons: hsl(0, 0%, 95%);
+$body: 15px;
+$title: "Big Shoulders Display", cursive;
+$text: "Lexend Deca", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $body;
+  display: grid;
+  place-content: center;
+  background-color: $gray-background-headings-buttons;
+  font-family: $text;
+}
+
+main {
+  max-width: $Mobile;
+  margin-top: 1rem;
+  padding: 1rem;
+  img {
+    padding-bottom: 1rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .orange {
+    background-color: $Bright-orange;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    button {
+      color: $Bright-orange;
+    }
+  }
+  .green {
+    background-color: $Dark-cyan;
+    button {
+      color: $Dark-cyan;
+    }
+  }
+  .dark-green {
+    background-color: $Very-dark-cyan;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    button {
+      color: $Very-dark-cyan;
+    }
+  }
+  h2 {
+    color: $gray-background-headings-buttons;
+    font-family: $title;
+    font-weight: 700;
+    font-size: xx-large;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+  p {
+    color: $white-paragraphs;
+    max-inline-size: 45ch;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    line-height: 1.5rem;
+  }
+  button {
+    background-color: $gray-background-headings-buttons;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    margin-top: 1rem;
+    outline: none;
+    border: 3px solid $gray-background-headings-buttons;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+      color: $gray-background-headings-buttons;
+      background-color: initial;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    max-width: $Desktop;
+    display: flex;
+    section {
+      max-width: 300px;
+      height: 500px;
+    }
+    button {
+      margin-top: 5.5rem;
+    }
+    .orange {
+      border-top-right-radius: initial;
+      border-bottom-left-radius: 10px;
+    }
+    .dark-green {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: initial;
+    }
+  }
+}
