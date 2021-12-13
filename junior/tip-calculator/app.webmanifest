@@ -1,0 +1,20 @@
+{
+  "name": "SPLITTER, the tip calculator",
+  "short_name": "SPLITTER",
+  "start_url": "./index.html",
+  "display": "minimal-ui",
+  "description": "Split easily the bill between your friends. Add also a tip, if you want",
+  "theme_color": "black",
+  "background_color": "cyan",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "./images/icon-192x192.png", "sizes": "192x192" },
+    { "src": "./images/icon-256x256.png", "sizes": "256x256" },
+    { "src": "./images/icon-384x384.png", "sizes": "384x384" },
+    {
+      "src": "./images/icon-512x512.png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

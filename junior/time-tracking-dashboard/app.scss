@@ -1,0 +1,240 @@
+$font-size: 18px;
+$font-family: Rubik;
+$font-weight: 300;
+$bold: 400;
+$bolder: 500;
+
+$blue: hsl(246, 80%, 60%);
+$work: hsl(15, 100%, 70%);
+$play: hsl(195, 74%, 62%);
+$study: hsl(348, 100%, 68%);
+$exercise: hsl(145, 58%, 55%);
+$social: hsl(264, 64%, 52%);
+$self-care: hsl(43, 84%, 65%);
+
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+
+/////////////////////////////////////////////////
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $very-dark-blue;
+  color: $pale-blue;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-rendering: optimizeSpeed;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $bolder;
+}
+
+img,
+picture {
+  pointer-events: none;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+//////////////////////////////////////////////////////////////
+main {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-items: center;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+header {
+  img {
+    border-radius: 100%;
+    outline: 3px solid white;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 2rem;
+    background-color: $blue;
+    border-radius: 10px;
+  }
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: large;
+  color: $pale-blue;
+  font-weight: $bolder;
+  span {
+    font-weight: $font-weight;
+    color: white;
+    font-size: x-large;
+  }
+}
+
+button {
+  cursor: pointer;
+  color: $desaturated-blue;
+  border: none;
+  background-color: transparent;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: $dark-blue;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.active {
+  color: $pale-blue;
+}
+
+.card {
+  width: 300px;
+
+  border-radius: 15px;
+  border: none;
+  background-color: $dark-blue;
+}
+
+section {
+  article {
+    padding: 1rem;
+    background-color: $dark-blue;
+    border-radius: 15px;
+    color: $pale-blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  figure {
+    text-align: right;
+    height: 35px;
+    overflow: hidden;
+    img {
+      margin-right: 1rem;
+      margin-top: -0.4rem;
+      transform: scale(0.8);
+    }
+  }
+  button {
+    text-align: right;
+  }
+}
+
+.work {
+  background-color: $work;
+}
+.play {
+  background-color: $play;
+}
+.study {
+  background-color: $study;
+}
+.exercise {
+  background-color: $exercise;
+}
+.social {
+  background-color: $social;
+}
+.self-care {
+  background-color: $self-care;
+}
+
+h2 {
+  color: white;
+  font-size: large;
+  font-weight: $bolder;
+}
+
+.stat {
+  color: white;
+  font-size: xx-large;
+}
+.subheader {
+  color: $desaturated-blue;
+  font-size: small;
+  text-align: right;
+}
+
+footer {
+  font-size: small;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 1500px;
+  }
+  header {
+    width: 200px !important;
+    grid-row: span 3;
+    height: 97%;
+    div {
+      gap: 2rem;
+    }
+  }
+
+  header div,
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    gap: 10px;
+  }
+
+  .card {
+    width: 200px;
+  }
+  section {
+    h2 {
+      font-size: small;
+    }
+
+    article {
+      gap: 0.5rem;
+    }
+
+    .stat {
+      margin-top: 1rem;
+    }
+
+    .subheader {
+      text-align: left;
+      grid-column: span 2;
+    }
+  }
+}

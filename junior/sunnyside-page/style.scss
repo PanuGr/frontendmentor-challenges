@@ -1,0 +1,215 @@
+:root {
+  --bs-font-sans-serif: "Barlow", sans-serif;
+  --bs-body-font-size: 18px;
+  --bs-body-font-weight: 600;
+  --red: #fe7867;
+  --yellow: hsl(51, 100%, 49%);
+  --graphic-design-text: #25564b;
+  --photography-text: #19536b;
+  --footer: hsl(168, 34%, 41%);
+  --titles: "Fraunces", serif;
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+}
+
+body {
+  min-width: 320px;
+  max-width: 1500px;
+  margin: auto;
+  background-color: transparent;
+}
+
+header {
+  background-image: url("./images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  font-family: var(--titles);
+}
+#navbarSupportedContent {
+  background-color: whitesmoke;
+  clip-path: polygon(0 15%, 95% 15%, 100% 0%, 100% 100%, 0 100%);
+  a {
+    color: var(--Dark-grayish-blue);
+    width: 50%;
+    margin: auto;
+  }
+  .contact {
+    background-color: var(--yellow);
+  }
+}
+
+h1 {
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  font-family: var(--titles);
+}
+
+h2,
+h3,
+a {
+  font-family: var(--titles);
+  text-decoration: none;
+}
+
+.card {
+  border: none;
+  border-radius: unset;
+}
+
+figure {
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  max-width: 500px;
+  margin: 0;
+}
+
+.shadow-orange,
+.shadow-red {
+  position: relative;
+  z-index: 1;
+  &::before {
+    z-index: -1;
+    position: absolute;
+    bottom: 0%;
+    content: "";
+    width: 140px;
+    height: 10px;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    opacity: 0.3;
+  }
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+}
+.shadow-red::before {
+  background-color: var(--red);
+}
+
+.egg {
+  background-image: url("./images/mobile/image-transform.jpg");
+  max-width: 100%;
+}
+.cup {
+  background-image: url("./images/mobile/image-stand-out.jpg");
+  background-position: center;
+}
+.cherries,
+.orange {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+.cherries {
+  background-image: url("./images/mobile/image-graphic-design.jpg");
+  h3,
+  p {
+    color: var(--graphic-design-text);
+  }
+}
+.orange {
+  background-image: url("./images/mobile/image-photography.jpg");
+  h3,
+  p {
+    color: var(--photography-text);
+  }
+}
+
+.milk {
+  background-image: url("./images/mobile/image-gallery-milkbottles.jpg");
+}
+.omelete {
+  background-image: url("./images/mobile/image-gallery-orange.jpg");
+}
+.cone {
+  background-image: url("./images/mobile/image-gallery-cone.jpg");
+}
+.cubes {
+  background-image: url("./images/mobile/image-gallery-sugar-cubes.jpg");
+}
+
+footer {
+  background-color: var(--footer);
+  a {
+    color: #080a0c;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+  img:hover {
+    filter: brightness(0) invert(1);
+  }
+}
+
+@media (min-width: 760px) {
+  .egg-flex {
+    display: flex;
+    flex-direction: row-reverse;
+    figure {
+      max-width: unset;
+      width: 50%;
+    }
+    article {
+      width: 50%;
+    }
+  }
+  header {
+    background-image: url("./images/desktop/image-header.jpg");
+  }
+  figure {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cherries {
+    background-image: url("./images/desktop/image-graphic-design.jpg");
+  }
+  .orange {
+    background-image: url("./images/desktop/image-photography.jpg");
+  }
+
+  .egg {
+    background-image: url("./images/desktop/image-transform.jpg");
+  }
+  .cup {
+    background-image: url("./images/desktop/image-stand-out.jpg");
+  }
+  .milk {
+    background-image: url("./images/desktop/image-gallery-milkbottles.jpg");
+  }
+  .omelete {
+    background-image: url("./images/desktop/image-gallery-orange.jpg");
+  }
+  .cone {
+    background-image: url("./images/desktop/image-gallery-cone.jpg");
+  }
+  .cubes {
+    background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
+  }
+}
+
+@media (min-width: 990px) {
+  #navbarSupportedContent {
+    all: unset;
+    a:not(.contact) {
+      color: white;
+      opacity: 0.7;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+    .contact {
+      background-color: white;
+    }
+  }
+}
