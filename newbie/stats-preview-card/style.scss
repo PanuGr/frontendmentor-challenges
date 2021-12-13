@@ -1,0 +1,145 @@
+$Mobile: 375px;
+$Desktop: 1440px;
+$background: hsl(233, 47%, 7%);
+$card-background: hsl(244, 38%, 16%);
+$violet: hsl(277, 64%, 61%);
+$heading-stats: hsl(0, 0%, 100%);
+$paragrapgh: hsla(0, 0%, 100%, 0.75);
+$stats: hsla(0, 0%, 100%, 0.6);
+$border: 10px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  background-color: $background;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  max-width: $Mobile;
+  background-color: $card-background;
+  border-radius: $border;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+}
+h1 {
+  color: $heading-stats;
+  font-weight: 700;
+  font-size: xx-large;
+  span {
+    color: $violet;
+  }
+}
+
+p {
+  max-inline-size: 75ch;
+  font-size: 15px;
+  color: gray;
+}
+.overlay {
+  background-image: url("./images/image-header-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &::after {
+    content: "";
+    background-color: $violet;
+    opacity: 0.5;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.overlay,
+.overlay::after {
+  border-top-left-radius: $border;
+  border-top-right-radius: $border;
+}
+
+.card-body {
+  text-align: center;
+  padding: 2rem;
+  h1,
+  p {
+    padding-bottom: 1.5rem;
+  }
+  ul {
+    list-style: none;
+    span {
+      color: $heading-stats;
+      font-size: x-large;
+    }
+    p {
+      text-transform: uppercase;
+    }
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+
+  a {
+    color: lightblue;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    max-width: 900px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .overlay {
+      grid-column: 2/3;
+      grid-row: 1;
+      background-image: url("./images/image-header-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      &::after {
+        content: "";
+        background-color: $violet;
+        opacity: 0.5;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .overlay,
+    .overlay::after {
+      border-top-left-radius: initial;
+
+      border-bottom-right-radius: $border;
+      border-top-right-radius: $border;
+    }
+    .card-body {
+      grid-column: 1/2;
+      text-align: left;
+      padding: 3rem;
+      h1,
+      p {
+        max-inline-size: 45ch;
+      }
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

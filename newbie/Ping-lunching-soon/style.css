@@ -1,0 +1,45 @@
+html { --Blue: hsl(223, 87%, 63%); --PaleBlue: hsl(223, 100%, 88%); --Red: hsl(354, 100%, 66%); --Gray: hsl(0, 0%, 59%); --DarkBlue: hsl(209, 33%, 12%); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: "Libre Franklin", sans-serif; font-size: 20px; display: grid; place-content: center; text-align: center; }
+
+img:nth-child(1) { padding: 4rem 0 2rem 0; }
+
+h1 { font-weight: 300; color: var(--Gray); padding: 1rem 0; }
+
+h1 span { color: initial; font-weight: bold; }
+
+form { margin: 2rem 0; display: flex; align-items: center; flex-direction: column; position: relative; }
+
+form input { width: 50%; padding: 0.8rem 0; margin-top: 20px; border-radius: 20px; outline: none; }
+
+form input[type="email"] { border: 1px solid var(--PaleBlue); padding-left: 1rem; color: var(--Gray); }
+
+form input[type="email"]:focus:invalid { border-color: var(--Red); border-width: 2px; }
+
+form input[type="submit"] { background-color: var(--Blue); color: white; border: none; cursor: pointer; font-weight: bold; letter-spacing: 1px; box-shadow: 0px 10px 19px -7px var(--PaleBlue); }
+
+form input[type="submit"]:hover, form input[type="submit"]:focus { opacity: 0.8; }
+
+.error-message { position: absolute; font-size: x-small; font-style: italic; color: var(--Red); text-align: left; visibility: hidden; top: 50%; left: 29%; }
+
+img:nth-child(1) { margin: auto; }
+
+img:nth-child(5) { width: 70%; height: auto; padding: 1rem; margin: auto; }
+
+footer { margin: 2rem 0; }
+
+footer p { font-size: xx-small; color: var(--Gray); }
+
+footer a { text-decoration: none; cursor: pointer; }
+
+footer ion-icon { color: var(--Blue); padding: 0.3rem; border: 1px solid rgba(150, 150, 150, 0.2); border-radius: 100%; }
+
+footer ion-icon:hover { color: white; background: var(--Blue); }
+
+@media (min-width: 1000px) { form { flex-direction: row; justify-content: center; }
+  form input[type="email"] { width: 30%; }
+  form input[type="submit"] { width: 15%; margin-left: 1rem; }
+  .error-message { top: 100%; }
+  img:nth-child(5) { width: 50%; margin-top: 2rem; } }
