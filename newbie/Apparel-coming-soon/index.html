@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+
+<body>
+  <img src="./images/logo.svg" alt="" class="logo" aria-hidden="true">
+
+  <picture aria-hidden="true">
+    <source srcset="./images/hero-desktop.jpg" media="(min-width:768px )">
+    <img src="./images/hero-mobile.jpg" alt="">
+  </picture>
+  <main>
+
+    <h1><span>We're </span>coming soon</h1>
+    <p>
+      Hello fellow shoppers! We're currently building our new fashion store.
+      Add your email below to stay up-to-date with announcements and our launch deals.
+    </p>
+    <form  novalidate>
+      <input type="email" name="email" id="email" placeholder="Email Address" required aria-required="true"
+        aria-label="Add your email address">
+      <img src="./images/icon-error.svg" alt="">
+
+      <input type="submit" value="" aria-label="submit your email">
+      
+      <p class="email-error">Please provide a valid email</p>
+    </form>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://panagiotis.netlify.com">P.Panagiotakopoulos</a>.
+    </p>
+  </footer>
+
+<script>
+  const input = document.querySelector('input');
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function formValidation(e) {
+    e.preventDefault();
+    if (!validateEmail(input.value)) {
+      document.querySelector('.email-error').style.visibility = 'visible';
+      document.querySelector('form img').style.visibility = 'visible';
+    } else {
+      location.reload()
+    }
+  };
+  document.querySelector('input[type=submit]').addEventListener('click', formValidation)
+</script>
+</body>
+</html>
