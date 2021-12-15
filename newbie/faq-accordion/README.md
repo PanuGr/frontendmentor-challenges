@@ -16,11 +16,6 @@ Users should be able to:
 
 ![](./images/accordion.jpg)
 
-### Links
-
-- Solution URL: [Github repository](https://github.com/PanuGr/faq-accordion)
-- Live Site URL: [github pages](https://panugr.github.io/faq-accordion)
-
 ## My process
 
 I decided to build this faq-accordion using just HTML and CSS.
@@ -66,9 +61,3 @@ I am still not comfortable working with svgs but this time was better than last 
 
 - [`<details>`: The Details disclosure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) - This article from MDN explains the details-tag and it helped me understand how to style its build-in marker.
 - [Details & Symmary](https://youtu.be/PQtpZZQU0u0) - A quick tutorial video about these 2 html tags.
-
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)

@@ -21,10 +21,6 @@ Users should be able to:
 
 ![](./images/screenshot.jpg)
 
-### Links
-
-- Solution URL: [Github repository](https://github.com/PanuGr/coming-soon-page)
-- Live Site URL: [Github pages](https://panugr.github.io/coming-soon-page)
 
 ### Built with
 
@@ -33,10 +29,3 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [Icons](https://ionic.io/ionicons) - Open source icons.
-
-
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)

@@ -18,11 +18,6 @@ Users should be able to:
 
 ![](./images/screenshot.jpg)
 
-### Links
-
-- Solution URL: [Github repository](https://github.com/PanuGr/coming-soon)
-- Live Site URL: [Github pages](https://panugr.github.io/coming-soon)
-
 ## My process
 
 Another interesting challenge from Front Mentor. This time I had the opportunity to work on my css grid skills and form validation.
@@ -54,12 +49,6 @@ However I realized that the design had custom design for the validation errors, 
 ### Useful resources
 
 - [Basic form validation](https://www.webtrickshome.com/faq/how-to-display-error-message-in-html-form-with-javascript-form-validation-without-using-alert) - This helped me to start with custom form validation.
-
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)
 
 ## Acknowledgments
 

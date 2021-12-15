@@ -7,10 +7,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ![](./images/screenshot.jpg)
 
-### Links
-- Solution URL: [Github repository](https://github.com/PanuGr/four-cards)
-- Live Site URL: [Github pages](https://panugr.github.io/four-cards)
-
 ### Built with
 
 - Semantic HTML5 markup
@@ -38,8 +34,3 @@ location. Below you can see part of the layout:
 
 - [Shadow Generator](https://html-css-js.com/css/generator/box-shadow/) - This site helps to visualize the box-shadow and it creates a snippet of the desired result. I find it very useful.
 - [Grid Generator](https://grid.layoutit.com/) - In this site I can draw the grid and the containers and I can see the code at the same time. I believe it saved me time from experimenting on css and checking the results on the browser.
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)

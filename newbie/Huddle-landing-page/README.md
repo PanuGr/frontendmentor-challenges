@@ -31,14 +31,3 @@ It all works with `grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));`
 ### Screenshot
 
 ![](./images/screenshot.jpg)
-
-### Links
-
-- Solution URL: [Github repository](https://github.com/PanuGr/landing-page)
-- Live Site URL: [Github pages](https://panugr.github.io/landing-page)
-
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)

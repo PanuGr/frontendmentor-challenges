@@ -30,19 +30,9 @@ div section {
 
 ![](./images/screenshot.jpg)
 
-### Links
-
-- Solution URL: [Github repository](https://github.com/PanuGr/price-component)
-- Live Site URL: [Github pages](https://panugr.github.io/price-component)
-
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)

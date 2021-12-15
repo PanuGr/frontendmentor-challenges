@@ -13,11 +13,6 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-### Links
-
-- Solution URL: [Add solution URL here](https://github.com/PanuGr/order-summary-component)
-- Live Site URL: [Add live site URL here](https://panugr.github.io/order-summary-component)
-
 ## My process
 In this challenge I wanted to get familiar with a new css framework, Foundation. This is a small project therefore I got to use just their card-component and grid-system.
 
@@ -31,7 +26,3 @@ In this challenge I wanted to get familiar with a new css framework, Foundation.
 
 - [Foundation Documentation](https://get.foundation/sites/docs/)
 
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.app)
-- Frontend Mentor - [@PanuGr](https://www.frontendmentor.io/profile/PanuGr)

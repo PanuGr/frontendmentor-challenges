@@ -13,9 +13,6 @@ Users should be able to:
 [Mobile version](./images/mobile-screenshot.jpg)
 [Desktop version](./images/desktop-screenshot.jpg)
 
-### Links
-- Solution URL: [Github repository](https://github.com/PanuGr/stats-preview-card)
-- Live Site URL: [Github pages](https://panugr.github.io/stats-preview-card)
 
 ## My process
 ### Built with
@@ -56,8 +53,3 @@ main {
 
 ### Continued development
 This challenge challenged my comfort area for sure and it made me understand that i should use the grid system more often in my layouts.
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)

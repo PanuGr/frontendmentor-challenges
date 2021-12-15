@@ -12,11 +12,6 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-### Links
-
-- [Code on Github](https://github.com/PanuGr/time-tracking-dashboard)
-- [Github pages](https://panugr.github.io/time-tracking-dashboard)
-
 ### Built with
 
 - Semantic HTML5 markup
@@ -79,8 +74,3 @@ button.addEventListener("click", () => {
 });
 ```
 It's not fully supported yet but It was very easy to work with this, so i hope that it will get better browser support soon.
-
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.app)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)

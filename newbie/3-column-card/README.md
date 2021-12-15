@@ -12,11 +12,6 @@ Users should be able to:
 [Mobile version](./images/mobile.jpg)
 [Desktop version](./images/desktop.jpg)
 
-### Links
-
-- Solution URL: [Github repository](https://github.com/PanuGr/3-column-card)
-- Live Site URL: [Github pages](https://panugr.github.io/3-column-card/)
-
 ## My process
 For this layout I decided to use flexbox on bigger screens, so the columns will stack next to each other.
 For mobiles, i just centered the layout and the columns are simply stacked on top of each other.
@@ -31,9 +26,3 @@ For each box i have created a class.
 
 ### What I learned
 At first I thought to use the selector `::nth-child()` for my `section` containers but after a while, I noticed that this selector has higher specificity and it was creating problems with my button-styling. That's why I created 3 separate classes instead to control the design better. 
-
-## Author
-
-- Website - [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.com)
-- Frontend Mentor - [PanuGr](https://www.frontendmentor.io/profile/PanuGr)
-- Linkedin - [Panagiotakopoulos](https://www.linkedin.com/in/p-panagiotakopoulos/)
