@@ -15,7 +15,7 @@ body input, body button, body textarea, body select { font: inherit; }
 
 h1 { color: white; font-size: xx-large; }
 
-header { background-image: url("./images/bg-pattern-intro.svg"); background-repeat: no-repeat; background-size: 200%; background-position: 10% 50%; background-color: #ff525d; border-end-start-radius: 5rem; color: #c8c8cb; padding: 1rem; min-height: 50vh; display: flex; flex-direction: column; gap: 7rem; }
+header { background-image: url("./images/bg-pattern-intro.svg"); background-repeat: no-repeat; background-size: 200%; background-position: 10% 50%; background-color: #d0434c; border-end-start-radius: 5rem; color: #c8c8cb; padding: 1rem; min-height: 50vh; display: flex; flex-direction: column; gap: 7rem; }
 
 header button { display: none; }
 
@@ -47,13 +47,13 @@ details[open] summary::after { transform: rotate(180deg); transition: transform 
 
 .dropdown a:hover { font-weight: bold; }
 
-.button-white { background-color: white; color: #ff525d; border-radius: 3rem; padding: 0.5rem 1rem; margin: 1rem; text-decoration: none; transition: all 0.3s ease-in-out; }
+.button-white { background-color: white; color: #d0434c; border-radius: 3rem; padding: 0.5rem 1rem; margin: 1rem; text-decoration: none; transition: all 0.3s ease-in-out; }
 
 .button-white:hover { background-color: #ff7a85; color: white; }
 
 .button-pink { color: white; border-radius: 3rem; border: solid 1px white; padding: 0.5rem 1rem; margin: 1rem; font-weight: bold; text-decoration: none; transition: all 0.3s ease-in-out; }
 
-.button-pink:hover { background-color: white; color: #ff525d; }
+.button-pink:hover { background-color: white; color: #d0434c; }
 
 .editor { background-image: url("./images/illustration-editor-mobile.svg"); background-repeat: no-repeat; background-size: cover; background-position: center; aspect-ratio: 1/1; }
 
@@ -100,7 +100,7 @@ footer nav a:hover, footer nav a:focus { text-decoration: underline; }
   header nav div[role="link"] { position: unset; }
   header nav div[role="link"] a { display: block; width: 50%; margin: auto; }
   header nav div[role="link"] a:first-child { color: black; }
-  header nav div[role="link"] a:last-child { color: white; background-color: #ff525d; padding: 1rem 0.5rem; margin-top: 1rem; }
+  header nav div[role="link"] a:last-child { color: white; background-color: #d0434c; padding: 1rem 0.5rem; margin-top: 1rem; }
   details { margin-bottom: 1rem; transform: translateX(50%); opacity: 0.5; transition: transform 350ms ease-in-out 100ms, opacity 550ms linear 300ms; }
   details summary:after { content: url("./images/icon-arrow-dark.svg"); }
   details[open] { font-weight: 300; color: #4b5862; }
