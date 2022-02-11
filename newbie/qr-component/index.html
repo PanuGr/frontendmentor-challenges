@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | QR code component</title>
+
+    <script async src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+    </style>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        html {
+          scroll-behavior: smooth;
+          line-height: 1.6;
+        }
+        body {
+          text-rendering: optimizeSpeed;
+        }
+
+        p,
+        ul,
+        ol {
+          margin-bottom: 2em;
+        }
+        img,
+        picture,
+        video,
+        iframe,
+        figure {
+          pointer-events: none;
+          max-width: 100%;
+          block-size: auto;
+        }
+        input,
+        button,
+        textarea,
+        select {
+          font: inherit;
+        }
+        .attribution {
+          font-size: 11px;
+          text-align: center;
+        }
+        .attribution a {
+          color: hsl(228, 45%, 44%);
+        }
+        @media (prefers-reduced-motion) {
+          html {
+            scroll-behavior: auto;
+          }
+          * {
+            animation: none;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="font-[Outfit] bg-[#d6e2f0] grid place-content-center h-screen">
+    <main
+      class="bg-white text-center p-3 rounded-xl grid justify-items-center gap-4 w-80 mx-auto"
+    >
+      <img
+        src="./images/image-qr-code.png"
+        width="300"
+        height="300"
+        alt="qr code to scan"
+        aria-hidden="true"
+        class="rounded-lg"
+        decoding="async"
+      />
+      <h1 class="text-[#1f3251] font-bold w-56 text-xl">
+        Improve your front-end skills by building projects
+      </h1>
+      <p class="text-[#7b879d] w-64">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level
+      </p>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://panagiotis.netlify.app">Panagiotis Panagiotakopoulos</a>.
+    </div>
+  </body>
+</html>
