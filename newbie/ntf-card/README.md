@@ -28,7 +28,7 @@ Users should be able to:
 
 ## Author
 
-- [Panagiotis Panagiotakopoulos-](https://panagiotis.netlify.app)
+- [Panagiotis Panagiotakopoulos](https://panagiotis.netlify.app)
 - Frontend Mentor - [@PanuGr](https://www.frontendmentor.io/profile/panugr)
 - Github - [@panugr](https://www.github.com/panugr)
 
