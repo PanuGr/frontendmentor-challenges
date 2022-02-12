@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<img src="./screenshot.jpg" width="700"/>
 
 ### Built with
 
