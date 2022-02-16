@@ -15,7 +15,7 @@ module.exports = {
 
       },
       backgroundImage: {
-        'hero-desktop': "url('images/bg-hero-desktop.svg')",
+        'hero-desktop': "url('https://github.com/PanuGr/frontendmentor-challenges/blob/main/junior/huddle-landing-page/images/bg-hero-desktop.svg')",
         'hero-mobile': "url('images/bg-hero-mobile.svg')"
       }
     },
