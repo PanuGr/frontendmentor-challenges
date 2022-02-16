@@ -1,0 +1,16 @@
+{
+  "name": "huddle-landing-page",
+  "version": "1.0.0",
+  "description": "Design preview for the Huddle landing page with alternating feature blocks",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tailwindcss -i main.css -o style.css --watch",
+    "build": "npx tailwindcss -i style.css -o style.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.22"
+  }
+}
