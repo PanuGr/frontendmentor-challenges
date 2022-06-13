@@ -26,9 +26,12 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties, Scss syntax
 - ``<dialog>`` markup
+- dialog polyfill
+- [Skypack](https://www.skypack.dev/)
 
 For this challenge, I thought to use the new ``<dialog>`` element. It's mostly supported in all browsers and it has many built-in features.
 It was fairly easy to implement this element and create a modal.
+Later I added a dialog polyfill to make it work in browsers that don't support dialog. I imported the polyfill from the skypack library
 
 
 ## Useful resources

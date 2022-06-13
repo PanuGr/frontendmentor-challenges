@@ -11,12 +11,12 @@
     />
     <title>Frontend Mentor | Interactive rating component</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
+    <script type="module" src="app.js" defer></script>
   </head>
   <body>
     <dialog open>
       <!-- Rating state start -->
-      <img src="./images/icon-star.svg" alt="" class="star" />
+      <img src="/images/icon-star.svg" alt="" class="star" />
       <h1>How did we do?</h1>
       <p>
         Please let us know how we did with your support request. All feedback is
@@ -25,11 +25,36 @@
 
       <form method="dialog">
         <fieldset>
-          <input type="button" value="1" class="rating" aria-label="rate with 1 star" />
-          <input type="button" value="2" class="rating" aria-label="rate with 2 stars" />
-          <input type="button" value="3" class="rating" aria-label="rate with 3 stars" />
-          <input type="button" value="4" class="rating" aria-label="rate with 4 stars" />
-          <input type="button" value="5" class="rating" aria-label="rate with 5 stars" />
+          <input
+            type="button"
+            value="1"
+            class="rating"
+            aria-label="rate with 1 star"
+          />
+          <input
+            type="button"
+            value="2"
+            class="rating"
+            aria-label="rate with 2 stars"
+          />
+          <input
+            type="button"
+            value="3"
+            class="rating"
+            aria-label="rate with 3 stars"
+          />
+          <input
+            type="button"
+            value="4"
+            class="rating"
+            aria-label="rate with 4 stars"
+          />
+          <input
+            type="button"
+            value="5"
+            class="rating"
+            aria-label="rate with 5 stars"
+          />
         </fieldset>
         <input type="submit" value="SUBMIT" aria-label="submit your rating" />
       </form>
@@ -60,5 +85,6 @@
       >. Coded by
       <a href="https://panagiotis.netlify.app">Panagiotis Panagiotakopoulos</a>.
     </footer>
+      
   </body>
 </html>

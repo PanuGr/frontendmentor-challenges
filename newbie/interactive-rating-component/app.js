@@ -1,4 +1,8 @@
-const dialog = document.querySelector('dialog');
+import dialogPolyfill from "https://cdn.skypack.dev/dialog-polyfill";
+const dialog = document.querySelector("dialog");
+dialogPolyfill.registerDialog(dialog);
+// Now dialog always acts like a native <dialog>.
+
 const submitButton = document.querySelector('input[type="submit"]');
 const stars = document.querySelectorAll('.rating');
 const thankMessageBlock = document.querySelector('main');
