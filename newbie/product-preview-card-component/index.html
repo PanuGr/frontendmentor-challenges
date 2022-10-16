@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style></style>
+  </head>
+  <body
+    class="grid min-h-screen place-content-center bg-cream p-3 font-sans text-gray"
+  >
+    <div class="max-w-prose rounded-xl bg-white md:flex">
+      <header>
+        <img
+          src="./images/image-product-desktop.jpg"
+          width="600"
+          height="900"
+          alt="perfume bottle"
+          aria-hidden="true"
+          class="hidden w-full rounded-l-lg md:block"
+        />
+        <img
+          src="./images/image-product-mobile.jpg"
+          width="686"
+          height="480"
+          alt="perfume bottle"
+          aria-hidden="true"
+          class="w-full rounded-t-lg md:hidden"
+        />
+      </header>
+      <main class="space-y-2 p-4 md:flex md:flex-col md:justify-between md:p-7">
+        <p class="tracking-[.25rem]">PERFUME</p>
+        <h1 class="font-serif text-4xl font-bold text-darkBlue md:max-w-xs">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="py-2 md:max-w-sm">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="flex items-center gap-5">
+          <p class="font-serif text-4xl font-bold text-green">$149.99</p>
+          <p class="line-through">$169.99</p>
+        </div>
+        <button
+          class="flex w-full items-center justify-center gap-2 rounded-xl bg-green p-3 font-medium text-white hover:bg-emerald-900 hover:font-bold hover:shadow-sm hover:shadow-lime-900 focus:bg-emerald-900 focus:font-bold focus:shadow-sm focus:shadow-lime-900"
+        >
+          <img
+            src="./images/icon-cart.svg"
+            loading="lazy"
+            width="15"
+            height="15"
+            alt="shopping cart icon"
+            aria-hidden="true"
+          />
+          Add to Cart
+        </button>
+      </main>
+    </div>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://panagiotis.netlify.app">Panagiotis Panagiotakoulos</a>.
+      </p>
+    </footer>
+  </body>
+</html>
