@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 7px;
+        outline: none;
+        background: hsl(224, 65%, 95%);
+        background-image: linear-gradient(
+          hsl(174, 77%, 80%),
+          hsl(174, 77%, 80%)
+        );
+        border-radius: 5px;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+      }
+
+      input[type="range"]:hover {
+        opacity: 1;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 30px;
+        width: 30px;
+        border: none;
+        border-radius: 50%;
+        background: hsl(174, 86%, 45%);
+        background-image: url("./images/icon-slider.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        box-shadow: 0 10px 15px 5px hsl(174, 77%, 80%);
+      }
+    </style>
+  </head>
+
+  <body
+    class="grid min-h-screen justify-center gap-4 bg-background bg-no-repeat px-8 text-bluish-400 lg:bg-contain"
+  >
+    <header class="bg-[size:50%] bg-circles bg-center bg-no-repeat p-3">
+      <h1 class="text-xl font-extrabold text-black">
+        Simple, traffic-based pricing
+      </h1>
+      <p class="max-w-xs text-center text-[15px]">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
+    </header>
+
+    <main class="grid justify-items-center gap-5 rounded-md bg-white p-4">
+      <div class="slidecontainer w-full">
+        <!--DESIGN FOR LARGE SCREENS-->
+        <p
+          class="pageview float-left hidden py-5 text-bluish-400 lg:inline-block"
+        >
+          100K Pageviews
+        </p>
+        <p class="float-right hidden py-5 text-bluish-400 lg:inline-block">
+          <b class="price text-4xl text-black">$16.00</b>/ month
+        </p>
+        <!--DESIGN FOR SMALL SCREENS-->
+        <p class="pageview py-5 text-center text-bluish-400 lg:hidden">
+          100K Pageviews
+        </p>
+        <input
+          id="range"
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          step="25"
+          aria-label="change your pricing"
+        />
+        <p class="py-5 text-center text-bluish-400 lg:hidden">
+          <b class="price text-4xl text-black">$16.00</b>/ month
+        </p>
+      </div>
+
+      <p class="flex items-center gap-1 text-xs">
+        Monthly Billing
+        <input type="checkbox" class="toggle toggle-accent" />
+        Yearly Billing
+        <span
+          class="rounded-xl bg-softRed py-1 px-1.5 text-red after:ml-1 lg:after:content-['discount']"
+          >-25%</span
+        >
+      </p>
+      <hr class="w-full" />
+      <section class="grid gap-5 lg:grid-flow-col lg:items-center lg:gap-20">
+        <ul class="list-inside space-y-3 text-center">
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button
+          class="btn btn-wide rounded-3xl bg-bluish-500 text-softBlue hover:text-white"
+        >
+          Start my trial
+        </button>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://panagiotis.netlify.app">P.Panagiotakopoulos</a>.
+    </footer>
+    <script>
+      const rangeInput = document.getElementById("range");
+      const toggle = document.querySelector('input[type="checkbox"]');
+
+      let output = {
+        pageview: null,
+        price: null,
+      };
+
+      //Coloring the range based on input
+      rangeInput.oninput = function (e) {
+        let target = e.target;
+        const min = target.min;
+        const max = target.max;
+        const val = target.value;
+        target.style.backgroundSize =
+          ((val - min) * 100) / (max - min) + "% 100%";
+
+        if (val == 0) {
+          output.pageview = "10K Pageviews";
+          output.price = 8;
+        } else if (val == 25) {
+          output.pageview = "50K Pageviews";
+          output.price = 12;
+        } else if (val == 50) {
+          output.pageview = "100K Pageviews";
+          output.price = 16;
+        } else if (val == 75) {
+          output.pageview = "500K Pageviews";
+          output.price = 24;
+        } else {
+          output.pageview = "1M Pageviews";
+          output.price = 36;
+        }
+
+        if (toggle.checked) {
+          //discount toggle
+          let discount = output.price - output.price * 0.25;
+
+          document.querySelectorAll(".price").forEach((price) => {
+            price.textContent = `$${discount}.00`;
+          });
+        } else {
+          document.querySelectorAll(".price").forEach((price) => {
+            price.textContent = `$${output.price}.00`;
+          });
+        }
+        document.querySelectorAll(".pageview").forEach((pageview) => {
+          pageview.textContent = output.pageview;
+        });
+      };
+    </script>
+  </body>
+</html>
