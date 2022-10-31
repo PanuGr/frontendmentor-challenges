@@ -61,7 +61,7 @@
   <body
     class="grid min-h-screen justify-center gap-4 bg-background bg-no-repeat px-8 text-bluish-400 lg:bg-contain"
   >
-    <header class="bg-[size:50%] bg-circles bg-center bg-no-repeat p-3">
+    <header class="bg-circles bg-[size:50%] bg-center bg-no-repeat p-3">
       <h1 class="text-xl font-extrabold text-black">
         Simple, traffic-based pricing
       </h1>
@@ -79,7 +79,8 @@
           100K Pageviews
         </p>
         <p class="float-right hidden py-5 text-bluish-400 lg:inline-block">
-          <b class="price text-4xl text-black">$16.00</b>/ month
+          <b class="text-4xl text-black">$<span class="price">16.00</span></b
+          >/ month
         </p>
         <!--DESIGN FOR SMALL SCREENS-->
         <p class="pageview py-5 text-center text-bluish-400 lg:hidden">
@@ -89,19 +90,19 @@
           id="range"
           type="range"
           min="0"
-          max="100"
-          value="50"
-          step="25"
+          max="4"
+          value="2"
           aria-label="change your pricing"
         />
         <p class="py-5 text-center text-bluish-400 lg:hidden">
-          <b class="price text-4xl text-black">$16.00</b>/ month
+          <b class="text-4xl text-black">$<span class="price">16.00</span></b
+          >/ month
         </p>
       </div>
 
       <p class="flex items-center gap-1 text-xs">
         Monthly Billing
-        <input type="checkbox" class="toggle toggle-accent" />
+        <input type="checkbox" class="toggle-accent toggle" />
         Yearly Billing
         <span
           class="rounded-xl bg-softRed py-1 px-1.5 text-red after:ml-1 lg:after:content-['discount']"
@@ -116,7 +117,7 @@
           <li>Email reports</li>
         </ul>
         <button
-          class="btn btn-wide rounded-3xl bg-bluish-500 text-softBlue hover:text-white"
+          class="btn-wide btn rounded-3xl bg-bluish-500 text-softBlue hover:text-white"
         >
           Start my trial
         </button>
@@ -133,53 +134,50 @@
     <script>
       const rangeInput = document.getElementById("range");
       const toggle = document.querySelector('input[type="checkbox"]');
+      const monthPrice = document.querySelectorAll(".price");
+      const pageviews = document.querySelectorAll(".pageview");
 
       let output = {
-        pageview: null,
-        price: null,
+        pageview: ["10K", "50K", "100K", "500K", "1M"],
+        pricelist: [8, 12, 16, 24, 36],
       };
 
-      //Coloring the range based on input
+      const changePrice = (value) => {
+        if (toggle.checked) {
+          monthPrice.forEach((price) => {
+            price.innerHTML = (output.pricelist[value] * 0.75).toFixed(2);
+          });
+        } else {
+          monthPrice.forEach((price) => {
+            price.innerHTML = output.pricelist[value].toFixed(2);
+          });
+        }
+        pageviews.forEach((pageview) => {
+          pageview.innerHTML = `${output.pageview[value]} Pageviews`;
+        });
+      };
+
+      toggle.addEventListener("click", () => {
+        if (toggle.checked) {
+          monthPrice.forEach((price) => {
+            price.innerHTML = (price.innerHTML * 0.75).toFixed(2);
+          });
+        } else {
+          monthPrice.forEach((price) => {
+            price.innerHTML = (price.innerHTML / 0.75).toFixed(2);
+          });
+        }
+      });
+
       rangeInput.oninput = function (e) {
         let target = e.target;
         const min = target.min;
         const max = target.max;
         const val = target.value;
+        //Coloring the range based on input
         target.style.backgroundSize =
           ((val - min) * 100) / (max - min) + "% 100%";
-
-        if (val == 0) {
-          output.pageview = "10K Pageviews";
-          output.price = 8;
-        } else if (val == 25) {
-          output.pageview = "50K Pageviews";
-          output.price = 12;
-        } else if (val == 50) {
-          output.pageview = "100K Pageviews";
-          output.price = 16;
-        } else if (val == 75) {
-          output.pageview = "500K Pageviews";
-          output.price = 24;
-        } else {
-          output.pageview = "1M Pageviews";
-          output.price = 36;
-        }
-
-        if (toggle.checked) {
-          //discount toggle
-          let discount = output.price - output.price * 0.25;
-
-          document.querySelectorAll(".price").forEach((price) => {
-            price.textContent = `$${discount}.00`;
-          });
-        } else {
-          document.querySelectorAll(".price").forEach((price) => {
-            price.textContent = `$${output.price}.00`;
-          });
-        }
-        document.querySelectorAll(".pageview").forEach((pageview) => {
-          pageview.textContent = output.pageview;
-        });
+        changePrice(val);
       };
     </script>
   </body>
