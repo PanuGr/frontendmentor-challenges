@@ -54,6 +54,8 @@ This repo contains all the challenges that I am completing from [frontendmentor.
 
 ## N <a id="n"></a>
 
+- [Newsletter sign-up](./newbie/ntf-card/)
+  - a sign-up form with basic form structure, validation, and submission, success/error states.
 - [NFT preview card](./newbie/ntf-card/)
   - a single block of NFT preview card made TailwindCss/CLI
 

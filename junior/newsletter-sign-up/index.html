@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=roboto:400,900" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <style>
+    .attribution {
+      font-size: small;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <picture>
+      <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+    </picture>
+    <section>
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      <form>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" aria-label="add your email" placeholder="email@company.com"
+        pattern="[A-Za-z0-9._+\-]+@[A-Za-z0-9\-]+\.[a-z]{2,6}" required>
+        <input type="submit" aria-label="submit the form" value="Subscribe to monthly newsletter">
+      </form>
+    </section>
+    <dialog>
+      <img src="./assets/images/icon-success.svg" alt="">
+      <h2>Thanks for subscribing!</h2>
+      <p>
+        A confirmation email has been sent to <b>ash@loremcompany.com.</b>
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <form method="dialog">
+        <input type="submit" autofocus aria-label="Dismiss message" value="Dismiss message">
+      </form>
+    </dialog>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+      Mentor</a>.
+    Coded by <a href="https://codealagreek.netlify.app" target="_blank" rel="noopener">Panagiotis Panagiotakopoulos</a>.
+  </footer>
+  <script>
+    const dialog = document.querySelector('dialog');
+    const emailInput = document.querySelector('input[type="email"]');
+    const submitButton = document.querySelector('input[type="submit"]');
+
+
+    function validate(e) {
+      if (emailInput.checkValidity()) {
+        e.preventDefault();
+        dialog.showModal();
+      } else {
+        return
+      }
+    }
+
+    //submitButton.addEventListener('click', validate);
+    //submitButton.onclick = validate;
+  </script>
+</body>
+
+</html>
