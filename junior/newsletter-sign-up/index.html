@@ -40,7 +40,7 @@
       <form>
         <label for="email">Email address</label>
         <input type="email" id="email" name="email" aria-label="add your email" placeholder="email@company.com"
-        pattern="[A-Za-z0-9._+\-]+@[A-Za-z0-9\-]+\.[a-z]{2,6}" required>
+          pattern="[A-Za-z0-9._+\-]+@[A-Za-z0-9\-]+\.[a-z]{2,6}" required>
         <input type="submit" aria-label="submit the form" value="Subscribe to monthly newsletter">
       </form>
     </section>
@@ -72,12 +72,12 @@
         e.preventDefault();
         dialog.showModal();
       } else {
-        return
+        return;
       }
     }
 
     //submitButton.addEventListener('click', validate);
-    //submitButton.onclick = validate;
+    submitButton.onclick = validate;
   </script>
 </body>
 
