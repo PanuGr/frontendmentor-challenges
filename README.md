@@ -7,6 +7,8 @@ This repo contains all the challenges that I am completing from [frontendmentor.
 
 ## A <a id="a"></a>
 
+- [Age Calculator](./junior/age-calculator/):
+  - A calculator with form-validation, both client-validation and custom javascript validation.
 - [Apparel coming soon page](./newbie/Apparel-coming-soon/):
   - This layout looks simple enough, but there are some interesting details to it. I also practice basic form validation.Made with HTML, CSS & JavaScript
 - [Article preview](./newbie/article-component/)
