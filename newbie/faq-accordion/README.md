@@ -1,50 +1,143 @@
 # Frontend Mentor - FAQ accordion card solution
 
-## Overview
-
-This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam).
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the component depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Hide/Show the answer to a question when the question is clicked
-
 ### Screenshot
-
 ![](./images/accordion.jpg)
 
-## My process
+## Overview
 
-I decided to build this faq-accordion using just HTML and CSS.
+This project is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). The goal of this challenge is to create a responsive FAQ accordion card that adjusts to different screen sizes and includes interactive elements that reveal answers to questions when clicked.
 
-In my .html file, I am using the `details` and `summary` tags which were perfect for this design.
-Then the card is divided in 2 parts with a `figure` and a `section` tag. The figure contains 1 main image and the section contains the accordion.
+## Used Technologies
 
-In my .scss file, I have stored the colors in a map-array. The whole content is centered by `display:grid;`, `place-content:center;` and my card is displayed as flexbox for bigger screens.
+- **HTML5**: Semantic HTML5 markup is used to structure the content of the page.
+- **CSS3 / SCSS**: SCSS is used for styling the page, including Flexbox for layout and CSS Grid for centering the content.
+- **Google Fonts**: 'Kumbh Sans' font is imported from Google Fonts for typography.
 
-The opening of the accordion is also styled and controlled from css.
+## Cool Features/Techniques Worth Mentioning
 
-Most of the images are displayed and positioned with the `::before`/`::after` selector.
+### Semantic HTML5 Tags
 
-### Built with
+The FAQ accordion is built using semantic HTML5 tags such as `details` and `summary`. These tags are perfect for creating an accordion-like structure, as they provide built-in functionality for showing and hiding content.
 
-- Semantic HTML5 markup
-- SCSS variable, maps, nesting
-- Flexbox
-- Mobile-first workflow
+```html
+<details>
+  <summary>How many team members can I invite?</summary>
+  <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+</details>
+```
 
-### What I learned
+### SCSS for Styling
 
-It was nice that I could use the `details` tag and learn more about controlling and styling it:
+SCSS is used to style the page, leveraging variables, maps, and nesting to manage the styles efficiently. Colors are stored in a map array to keep the code clean and organized.
+
 ```scss
+$colors: (
+  blue: hsl(238, 29%, 16%),
+  red: hsl(14, 88%, 65%),
+  violet: hsl(273, 75%, 66%),
+  lightblue: hsl(240, 73%, 65%),
+  gray: hsl(237, 12%, 33%),
+  lightgray: hsl(240, 6%, 50%),
+  white: hsl(240, 5%, 91%),
+);
+```
+
+### Responsive Design
+
+The component is designed to be responsive and adjusts its layout based on the screen size. The mobile-first approach ensures that the design looks good on smaller screens and scales up for larger screens.
+
+```scss
+@media (min-width: 1024px) {
+  main {
+    margin-top: initial;
+    padding-top: initial;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: -990% 60%;
+    position: relative;
+    &::after {
+      content: url("./images/illustration-box-desktop.svg");
+      position: absolute;
+      left: -100px;
+      top: 9.5rem;
+    }
+  }
+}
+```
+
+### CSS Flexbox and Grid
+
+The layout is created using a combination of CSS Grid and Flexbox, allowing for a flexible and responsive design. CSS Grid is used to center the content, while Flexbox is used for aligning elements within the grid.
+
+```scss
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    map-get($colors, violet),
+    map-get($colors, lightblue)
+  );
+  background-position: center;
+  background-size: cover;
+}
+
+main {
+  width: clamp(320px, 80vw, $mobile);
+  padding: 2rem;
+  margin-top: 5rem;
+  padding-top: 5rem;
+  border-radius: 20px;
+  background-color: white;
+  height: fit-content;
+}
+```
+
+### Custom Styling for `details` and `summary`
+
+The `details` and `summary` tags are styled using CSS to create a visually appealing accordion. The `::before` and `::after` pseudo-elements are used to add icons and background images.
+
+```scss
+details {
+  border-bottom: 2px solid map-get($map: $colors, $key: white);
+
+  summary {
+    color: map-get($map: $colors, $key: gray);
+    position: relative;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    list-style-type: none;
+    &:hover {
+      color: map-get($colors, red);
+    }
+    &:active {
+      font-weight: 700;
+    }
+    &::after {
+      content: url("./images/icon-arrow-down.svg");
+      position: absolute;
+      right: 0;
+    }
+  }
+  p {
+    margin-left: 15px;
+    padding-bottom: 1rem;
+    line-height: 18px;
+    max-inline-size: 45ch;
+  }
+}
+
 details[open] {
   summary {
-    font-weight: 700; //font-weight on the title
+    font-weight: 700;
     &::after {
-      transform: rotate(180deg); //rotation of the arrow-icon
+      transform: rotate(180deg);
     }
   }
   p {
@@ -52,12 +145,5 @@ details[open] {
   }
 }
 ```
-Also working with many images overlapping each other was challenging and I had to get creative.
-### Continued development
 
-I am still not comfortable working with svgs but this time was better than last time, so that's improvement 🙂
-
-### Useful resources
-
-- [`<details>`: The Details disclosure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) - This article from MDN explains the details-tag and it helped me understand how to style its build-in marker.
-- [Details & Symmary](https://youtu.be/PQtpZZQU0u0) - A quick tutorial video about these 2 html tags.
+These techniques and features contribute to a well-structured, responsive, and user-friendly FAQ accordion card.
