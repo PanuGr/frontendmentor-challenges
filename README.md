@@ -19,25 +19,12 @@ This repo contains all the challenges that I am completing from [frontendmentor.
 - [Blogr landing page](./junior/blog-landing-page/)
   - Landing page. I'm mostly working with HTML & CSS for this project with a tiny bit of JS for the mobile menu
 
-## C <a id="c"></a>
-
-- [Calculator](./junior/tip-calculator/)
-    - This small app calculates the tips. Made with HTML(form inputs), CSS & javascript
-
-<!-- ## D <a id="d"></a>
-
-## E <a id="e"></a>
- -->
-
 ## F <a id="f"></a>
 
 - [FAQ accordion card](./newbie/faq-accordion/)
   - FAQ block made with `details` tag
 - [Four card feature section](./newbie/four-cards/)
   - a simple four card feature section made with HTML & CSS grid
-
-<!-- ## G <a id="g"></a>
- -->
 
 ## H <a id="h"></a>
 
@@ -51,8 +38,6 @@ This repo contains all the challenges that I am completing from [frontendmentor.
 - [Interactive rating component](./newbie/interactive-rating-component/)
   - interactive rating component made with the `dialog` element
 
-<!-- ## M <a id="m"></a>
- -->
 
 ## N <a id="n"></a>
 
@@ -80,8 +65,6 @@ This repo contains all the challenges that I am completing from [frontendmentor.
 - [QR code block](./newbie/qr-component/)
   - QR code component made TailwindCSS
 
-<!-- ## R <a id="r"></a> -->
-
 ## S <a id="s"></a>
 
 - [Sign-up form](./newbie/signup-form/)
@@ -96,6 +79,3 @@ This repo contains all the challenges that I am completing from [frontendmentor.
 ## T <a id="t"></a>
 
 - [Time-tracking dashboard](./junior/time-tracking-dashboard/) - A time-tracking dashboard, made with HTML, SCSS, Javascript & grid
-<!-- ## U <a id="u"></a>
-
-## W <a id="u"></a> -->
